@@ -13,35 +13,28 @@
 
   <!-- ============ LOGIN ============ -->
   <div id="login-view" class="login hidden">
-    <section class="login-side">
-      <div class="brand brand-light"><span id="lg-logo"></span><span>SPYcomers</span></div>
-      <div class="login-hero">
-        <h1>Cada cobro a tiempo, sin perseguir a nadie.</h1>
-        <p>Registra clientes, controla pagos pendientes y recibe avisos antes de cada vencimiento.</p>
-        <div class="login-feats" id="lg-feats"></div>
-      </div>
-      <small class="login-foot">Acceso para administradores y usuarios del equipo</small>
-    </section>
-    <section class="login-main">
-      <form class="login-box" id="login-form" autocomplete="on">
+    <form class="login-box" id="login-form" autocomplete="on">
+      <div class="login-brand"><span id="lg-logo"></span><span>SPYcomers</span></div>
+      <div class="login-head">
         <h2>Iniciar sesión</h2>
-        <p class="muted">Ingresa con tu usuario y contraseña.</p>
-        <label class="field">
-          <span>Usuario</span>
-          <input id="lg-user" name="usuario" required autocomplete="username" placeholder="tu usuario">
-        </label>
-        <label class="field">
-          <span>Contraseña</span>
-          <div class="pass-wrap">
-            <input id="lg-pass" name="password" type="password" required autocomplete="current-password" placeholder="••••••••">
-            <button type="button" class="icon-btn" id="lg-eye" aria-label="Mostrar contraseña"></button>
-          </div>
-        </label>
-        <p class="form-error hidden" id="lg-error"></p>
-        <button class="btn btn-primary btn-block" type="submit" id="lg-submit">Ingresar</button>
-        <div class="hint hidden" id="lg-hint"></div>
-      </form>
-    </section>
+        <p class="muted">Gestión de cobros y pagos pendientes</p>
+      </div>
+      <label class="field">
+        <span>Usuario</span>
+        <input id="lg-user" name="usuario" required autocomplete="username" placeholder="tu usuario">
+      </label>
+      <label class="field">
+        <span>Contraseña</span>
+        <div class="pass-wrap">
+          <input id="lg-pass" name="password" type="password" required autocomplete="current-password" placeholder="••••••••">
+          <button type="button" class="icon-btn" id="lg-eye" aria-label="Mostrar contraseña"></button>
+        </div>
+      </label>
+      <p class="form-error hidden" id="lg-error"></p>
+      <button class="btn btn-primary btn-block" type="submit" id="lg-submit">Ingresar</button>
+      <div class="hint hidden" id="lg-hint"></div>
+    </form>
+    <small class="login-foot">Acceso para administradores y usuarios del equipo</small>
   </div>
 
   <!-- ============ APP ============ -->

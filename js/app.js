@@ -1272,16 +1272,12 @@
 
   /* ---------- Arranque ---------- */
   function init() {
-    $('#lg-logo').innerHTML = icon('logo', 28);
+    $('#lg-logo').innerHTML = icon('logo', 30);
     $('#sb-logo').innerHTML = icon('logo', 26);
     $('#lg-eye').innerHTML = icon('eye', 18);
     $('#btn-menu').innerHTML = icon('menu', 22);
     $('#btn-logout').innerHTML = `${icon('logout', 18)}<span class="btn-logout-text">Salir</span>`;
-    $('#lg-feats').innerHTML = [
-      ['bell', 'Avisos antes de cada vencimiento'],
-      ['users', 'Clientes con historial de pagos'],
-      ['shield', 'Varios administradores y usuarios']
-    ].map(([i, t]) => `<div>${icon(i, 22)}<span>${t}</span></div>`).join('');
+
 
     const sid = localStorage.getItem(SESSION);
     const u = sid && DB.get('usuarios', sid);
