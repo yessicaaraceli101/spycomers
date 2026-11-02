@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>SPYcomers · Gestión de cobros</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+  <!-- ============ LOGIN ============ -->
+  <div id="login-view" class="login hidden">
+    <section class="login-side">
+      <div class="brand brand-light"><span id="lg-logo"></span><span>SPYcomers</span></div>
+      <div class="login-hero">
+        <h1>Cada cobro a tiempo, sin perseguir a nadie.</h1>
+        <p>Registra clientes, controla pagos pendientes y recibe avisos antes de cada vencimiento.</p>
+        <div class="login-feats" id="lg-feats"></div>
+      </div>
+      <small class="login-foot">Acceso para administradores y usuarios del equipo</small>
+    </section>
+    <section class="login-main">
+      <form class="login-box" id="login-form" autocomplete="on">
+        <h2>Iniciar sesión</h2>
+        <p class="muted">Ingresa con tu usuario y contraseña.</p>
+        <label class="field">
+          <span>Usuario</span>
+          <input id="lg-user" name="usuario" required autocomplete="username" placeholder="tu usuario">
+        </label>
+        <label class="field">
+          <span>Contraseña</span>
+          <div class="pass-wrap">
+            <input id="lg-pass" name="password" type="password" required autocomplete="current-password" placeholder="••••••••">
+            <button type="button" class="icon-btn" id="lg-eye" aria-label="Mostrar contraseña"></button>
+          </div>
+        </label>
+        <p class="form-error hidden" id="lg-error"></p>
+        <button class="btn btn-primary btn-block" type="submit" id="lg-submit">Ingresar</button>
+        <div class="hint hidden" id="lg-hint"></div>
+      </form>
+    </section>
+  </div>
+
+  <!-- ============ APP ============ -->
+  <div id="app" class="hidden">
+    <aside id="sidebar" class="sidebar">
+      <div class="brand"><span id="sb-logo"></span><span id="brand-name">SPYcomers</span></div>
+      <nav id="nav" class="nav"></nav>
+      <button class="me-card" id="me-card" data-nav="perfil" title="Ver mi perfil"></button>
+    </aside>
+    <div class="scrim" id="scrim" data-act="menu"></div>
+
+    <div class="main">
+      <header class="topbar">
+        <button class="icon-btn only-mobile" data-act="menu" id="btn-menu" aria-label="Menú"></button>
+        <div class="topbar-title">
+          <h1 id="page-title">Inicio</h1>
+          <small id="page-sub" class="muted"></small>
+        </div>
+        <div class="topbar-actions">
+          <button class="icon-btn bell" data-nav="recordatorios" id="btn-bell" aria-label="Recordatorios"></button>
+          <button class="btn btn-danger" data-act="logout" id="btn-logout"></button>
+        </div>
+      </header>
+      <main id="content" class="content"></main>
+    </div>
+  </div>
+
+  <div id="modal-root"></div>
+  <div id="toast-root" class="toasts"></div>
+
+  <script src="js/icons.js"></script>
+  <script src="js/vendor/jspdf.umd.min.js"></script>
+  <script src="js/factura.js"></script>
+  <script src="js/logos.js"></script>
+  <script src="js/db.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>

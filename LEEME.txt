@@ -1,0 +1,61 @@
+SPYCOMERS — Sistema de pagos pendientes y clientes
+=====================================================
+
+CÓMO USARLO
+1. Descomprime la carpeta.
+2. Abre el archivo index.html con Chrome, Edge o Firefox (doble clic).
+3. Primer ingreso:  usuario: admin   contraseña: admin123
+   (cámbiala desde "Mi perfil" apenas entres).
+
+QUÉ INCLUYE
+- Inicio: total por cobrar, vencidos, próximos a vencer y cobrado del mes.
+- Clientes: alta, edición, ficha con historial y saldo pendiente.
+- Pagos: registro con fecha de vencimiento, cuotas mensuales automáticas,
+  filtros (pendientes, vencidos, por vencer, pagados) y registro del cobro
+  (fecha, método, comprobante).
+- Recordatorios: resumen al iniciar sesión, contador en la campana,
+  notificaciones del navegador y envío de aviso por WhatsApp o correo.
+- Comprobantes: factura (A4) y ticket (80 mm) en PDF, con numeración
+  automática, IVA 10% / 5% / exenta, total en letras y logo. Se pueden
+  descargar, imprimir y enviar por WhatsApp.
+  La factura replica el formulario de Consorcio Spy E.A.S. (timbrado
+  19158753, RUC 80138884-8, N° 002-001, desde 0001442). Esos datos ya
+  vienen cargados y se pueden cambiar en Configuración > Datos de facturación.
+  Los logos se recortaron de la foto de la factura: para mejor calidad,
+  sube los archivos originales en esa misma sección.
+- Usuarios: varios administradores y usuarios, activar/desactivar acceso.
+- Configuración: nombre de empresa, moneda, días de anticipación del aviso,
+  respaldo y restauración de datos.
+
+ROLES
+- Administrador: todo, incluido gestionar usuarios, configuración y eliminar.
+- Usuario: registra y edita clientes y pagos, y marca cobros.
+
+IMPORTANTE SOBRE LOS DATOS
+Los datos se guardan en el navegador del equipo donde se abre el sistema.
+Varias personas pueden usar el mismo equipo con distintos usuarios, pero
+otro computador no verá estos datos. Descarga un respaldo (.json) seguido
+desde Configuración. Para usarlo en red entre varios equipos haría falta
+un servidor con base de datos (por ejemplo PHP + MySQL).
+
+ENVÍO POR WHATSAPP
+WhatsApp no permite adjuntar archivos desde un enlace. Al tocar
+"Enviar por WhatsApp" se descarga el PDF y se abre el chat del cliente con
+el mensaje escrito: solo adjunta el PDF con el clip > Documento.
+Si aparece el botón "Compartir", envía el PDF directo a la app instalada.
+
+VALIDEZ FISCAL
+Los PDF son comprobantes internos. Para que una factura electrónica tenga
+validez legal debe emitirse por el sistema autorizado de la administración
+tributaria (en Paraguay, SIFEN / e-Kuatia de la DNIT), normalmente a través
+de un proveedor homologado, con firma digital y código CDC.
+
+ARCHIVOS
+index.html        Pantallas
+css/styles.css    Diseño (celeste, blanco y naranja)
+js/icons.js       Íconos de línea
+js/db.js          Almacenamiento de datos
+js/app.js         Funcionamiento del sistema
+js/factura.js     Diseño de factura y ticket en PDF
+js/logos.js       Logos de la empresa
+js/vendor/        Librería jsPDF (funciona sin internet)
